@@ -1,6 +1,7 @@
 package com.itpu.internship.seats_reservation.dtos;
 
 import com.itpu.internship.seats_reservation.utils.SeatStatus;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -11,18 +12,24 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @ToString
+@Schema(description = "Request model for creating or updating a cinema seat/place")
 public class SaveSeatDTO {
 
     @NotNull
+    @Schema(description = "Row number of the seat in the hall", example = "3", requiredMode = Schema.RequiredMode.REQUIRED)
     private Integer row;
 
     @NotNull
+    @Schema(description = "Seat number within the row", example = "15", requiredMode = Schema.RequiredMode.REQUIRED)
     private Integer number;
 
+    @Schema(description = "Status of the seat", example = "ACTIVE", allowableValues = {"ACTIVE", "DEACTIVATED"})
     private SeatStatus status;
 
     @NotNull
+    @Schema(description = "Whether the seat is available for booking", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
     private Boolean isAvailable;
 
+    @Schema(description = "Optional comment about the seat", example = "VIP seat")
     private String comment;
 }

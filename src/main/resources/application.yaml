@@ -4,8 +4,8 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/seats_reservation
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: postgres
+    password: ${DB_PASSWORD:korvin}
     driver-class-name: org.postgresql.Driver
     hikari:
       schema: base_schema
@@ -29,3 +29,10 @@ spring:
     default-schema: base_schema
     liquibase-schema: base_schema
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
