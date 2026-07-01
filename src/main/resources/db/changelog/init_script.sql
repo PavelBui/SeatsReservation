@@ -16,12 +16,12 @@ CREATE TABLE base_schema.halls (
 CREATE TABLE base_schema.movies (
     id BIGSERIAL PRIMARY KEY,
     title VARCHAR(500),
-    "duration-minutes" INTEGER,
-    "age-rating" VARCHAR(50),
+    duration_minutes INTEGER,
+    age_rating VARCHAR(50),
     rating REAL,
-    "poster-url" VARCHAR(1000),
+    poster_url VARCHAR(1000),
     description TEXT,
-    "release-year" INTEGER
+    release_year INTEGER
 );
 
 CREATE TABLE base_schema.movie_genres (
@@ -42,8 +42,8 @@ CREATE TABLE base_schema.seats (
     id BIGSERIAL PRIMARY KEY,
     hall_id BIGINT NOT NULL,
     price_category_id BIGINT NOT NULL,
-    "row" INTEGER,
-    "number" INTEGER,
+    row INTEGER,
+    number INTEGER,
     status VARCHAR(50),
     comment VARCHAR(500),
     CONSTRAINT fk_seats_hall FOREIGN KEY (hall_id)
@@ -57,8 +57,8 @@ CREATE TABLE base_schema.sessions (
     movie_id BIGINT NOT NULL,
     hall_id BIGINT NOT NULL,
     title VARCHAR(500),
-    "date" DATE,
-    "time" TIME,
+    date DATE,
+    time TIME,
     language VARCHAR(50),
     format VARCHAR(50),
     CONSTRAINT fk_sessions_movie FOREIGN KEY (movie_id)

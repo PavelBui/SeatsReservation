@@ -25,17 +25,17 @@ public class MovieEntity {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "duration-minutes")
+    @Column(name = "duration_minutes")
     private Integer durationMinutes;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "age-rating")
+    @Column(name = "age_rating")
     private AgeRating ageRating;
 
     @Column(name = "rating")
     private Float rating;
 
-    @Column(name = "poster-url")
+    @Column(name = "poster_url")
     private String posterUrl;
 
     @Column(name = "description")
@@ -47,7 +47,7 @@ public class MovieEntity {
     @Column(name = "genre")
     private Set<Genre> genres;
 
-    @Column(name = "release-year")
+    @Column(name = "release_year")
     private Integer releaseYear;
 
     @Override
