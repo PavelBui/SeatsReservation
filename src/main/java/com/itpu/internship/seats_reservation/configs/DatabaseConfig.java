@@ -10,9 +10,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Configures JPA repositories, entity scanning and transaction management
  */
 @Configuration
-@EnableJpaRepositories(basePackages = "com.itpu.internship.seats_reservation")
+@EnableJpaRepositories(basePackages = "com.itpu.internship.seats_reservation.repositories")
 @EntityScan(basePackages = "com.itpu.internship.seats_reservation.entities")
 @EnableTransactionManagement
 public class DatabaseConfig {
 }
-

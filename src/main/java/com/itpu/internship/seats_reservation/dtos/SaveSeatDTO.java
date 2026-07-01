@@ -26,10 +26,6 @@ public class SaveSeatDTO {
     @Schema(description = "Status of the seat", example = "ACTIVE", allowableValues = {"ACTIVE", "DEACTIVATED"})
     private SeatStatus status;
 
-    @NotNull
-    @Schema(description = "Whether the seat is available for booking", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
-    private Boolean isAvailable;
-
     @Schema(description = "Optional comment about the seat", example = "VIP seat")
     private String comment;
 }

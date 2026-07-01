@@ -28,9 +28,6 @@ public class GetSeatDTO {
     @Schema(description = "Current status of the seat", example = "ACTIVE")
     private SeatStatus status;
 
-    @Schema(description = "Whether the seat is available for booking", example = "true")
-    private Boolean isAvailable;
-
     @Schema(description = "Optional comment about the seat (e.g. damaged, reserved)", example = "VIP seat")
     private String comment;
 }

@@ -28,9 +28,6 @@ public class GetSessionSeatDTO {
     @Schema(description = "Status of the seat within the session", example = "ACTIVE")
     private SeatStatus status;
 
-    @Schema(description = "Whether the seat is available in this session", example = "false")
-    private String isAvailable;
-
     @Schema(description = "Name of the customer who reserved the seat", example = "John Doe")
     private String customerName;
 

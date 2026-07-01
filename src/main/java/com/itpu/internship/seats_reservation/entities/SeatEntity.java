@@ -38,9 +38,6 @@ public class SeatEntity {
     @Column(name = "status")
     private SeatStatus status;
 
-    @Column(name = "is_available")
-    private Boolean isAvailable;
-
     @Column(name = "comment")
     private String comment;
 

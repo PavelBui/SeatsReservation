@@ -45,7 +45,6 @@ CREATE TABLE base_schema.seats (
     "row" INTEGER,
     "number" INTEGER,
     status VARCHAR(50),
-    is_available BOOLEAN,
     comment VARCHAR(500),
     CONSTRAINT fk_seats_hall FOREIGN KEY (hall_id)
         REFERENCES base_schema.halls(id) ON DELETE CASCADE,
@@ -73,7 +72,6 @@ CREATE TABLE base_schema.session_seats (
     session_id BIGINT NOT NULL,
     seat_id BIGINT NOT NULL,
     status VARCHAR(50),
-    is_available VARCHAR(50),
     customer_name VARCHAR(255),
     contact VARCHAR(255),
     CONSTRAINT fk_session_seats_session FOREIGN KEY (session_id)

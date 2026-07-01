@@ -32,9 +32,6 @@ public class SessionSeatEntity {
     @Column(name = "status")
     private SeatStatus status;
 
-    @Column(name = "is_available")
-    private String isAvailable;
-
     @Column(name = "customer_name")
     private String customerName;
 
