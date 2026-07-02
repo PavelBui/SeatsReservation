@@ -16,6 +16,14 @@ import lombok.experimental.SuperBuilder;
 public class SaveSeatDTO {
 
     @NotNull
+    @Schema(description = "ID of the hall containing this seat", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
+    private Long hallId;
+
+    @NotNull
+    @Schema(description = "ID of the price category for this seat", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)
+    private Long priceCategoryId;
+
+    @NotNull
     @Schema(description = "Row number of the seat in the hall", example = "3", requiredMode = Schema.RequiredMode.REQUIRED)
     private Integer row;
 
